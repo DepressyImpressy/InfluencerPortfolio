@@ -1,22 +1,27 @@
 
-.textchunk{
-    background-color: whitesmoke;
-    color: black;
+/*overall DOM*/
+.hiddentext{
+    color: transparent;
+    text-decoration: none;
 }
 
-.darkmode{
-    background-color: #121212;
-    color: white;
+body{
+    background: linear-gradient(#121212, #1e1e1e);
 }
 
-.darkmodetextchunk{
-    background-color: #1e1e1e;
-    color: #4da3ff;
+.lightmode{
+    background: linear-gradient(purple, rgb(233, 142, 233));
+    color: #121212;
+
 }
 
-/*.darkmodehiddentext{
-    +diff neon colors between dark toggles
-}*/
+/*button structure*/
+
+.button1{
+    float: right;
+}
+
+/*header*/
 
 .titleblock{
     background-color: #333;
@@ -26,8 +31,87 @@
     font-size: 42px;
 }
 
-button{
-    align-items: right;
+
+.neon2{
+    color: rgb(185, 0, 124);
+    text-shadow:
+    0 7px #fff,
+    0 0 10px #fff,
+    0 0 21px #fff,
+    0 0 42px rgb(185, 0, 124),
+    0 0 82px rgb(185, 0, 124),
+    0 0 92px rgb(185, 0, 124),
+    0 0 102px rgb(185, 0, 124),
+    0 0 151px rgb(185, 0, 124);
+}
+
+/*Link list*/
+
+.neon{
+    color: #fff;
+    text-shadow: 
+    0 7px #fff,
+    0 0 10px #fff,
+    0 0 21px #fff,
+    0 0 42px #0fa,
+    0 0 82px #0fa,
+    0 0 92px #0fa,
+    0 0 102px #0fa,
+    0 0 151px #0fa;
+}
+
+.linkList{
+   
+    background-color: #333;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;    
+}
+
+ul{
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    padding: 20px;
+    gap: 250px;
+    font-size: 50px;
+    
+}
+
+
+/*Body text logic*/
+
+.lightmodetextchunk{
+    background-color: whitesmoke;
+    color: black;
+    font-size: 25px;
+}
+
+.darkmodetextchunk{
+    background-color: #1e1e1e;
+    color: #4da3ff;
+    font-size: 25px;
+    
+}
+
+.flavortext{
+    display: flex;
+    width: 1000px;
+    height: 250px;
+    align-items: center;
+    justify-content: center;
+    border: 10px inset purple;
+    margin: auto;
+}
+
+/*gallery logic*/
+
+.gallery-title{
+    text-align: center;
+    background-color: #333;
+    font-size: 50px;
 }
 
 div.gallery1{
@@ -43,62 +127,24 @@ white-space: nowrap;
 padding: 25px;
 }
 
-img {
+img{
     display: block;
-  max-width:900px;
-  max-height:750px;
-  width: auto;
-  height: auto;
+    max-width:900px;
+    max-height:750px;
+    width: auto;
+    height: auto;
 }
 
-.linkList{
-   
-    background-color: #333;
-
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;    
+video{
+    max-width: 900px;
+    max-height: 750px;
+    width: auto;
+    height: auto;
 }
 
-.neon{
-    color: #fff;
-    text-shadow: 
-    0 7px #fff,
-    0 0 10px #fff,
-    0 0 21px #fff,
-    0 0 42px #0fa,
-    0 0 82px #0fa,
-    0 0 92px #0fa,
-    0 0 102px #0fa,
-    0 0 151px #0fa;
-}
 
-.neon2{
-    color: rgb(185, 0, 124);
-    text-shadow:
-    0 7px #fff,
-    0 0 10px #fff,
-    0 0 21px #fff,
-    0 0 42px rgb(185, 0, 124),
-    0 0 82px rgb(185, 0, 124),
-    0 0 92px rgb(185, 0, 124),
-    0 0 102px rgb(185, 0, 124),
-    0 0 151px rgb(185, 0, 124);
-}
 
-.hiddentext{
-    color: transparent;
-    text-decoration: none;
-}
 
-ul{
-    display: flex;
-    flex-direction: row;
-    list-style: none;
-    padding: 20px;
-    gap: 250px;
-    font-size: 50px;
-    
-}
+
+
 

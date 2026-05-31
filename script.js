@@ -9,13 +9,6 @@ button.addEventListener("click", function(){
     console.log("The button was clicked!");
     
     var bodyElement = document.body;
-    bodyElement.classList.toggle("darkmode");
-
-    var elements = document.getElementsByClassName("textchunk")
+    bodyElement.classList.toggle("lightmode");
     
-    for(var element of elements){
-        console.log(element)
-        element.classList.toggle("darkmodetextchunk");
-    }
-   
 });
