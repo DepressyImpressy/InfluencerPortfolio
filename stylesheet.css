@@ -127,6 +127,12 @@ white-space: nowrap;
 padding: 25px;
 }
 
+#gCategoryButtons{
+    display: none;
+    position: absolute; /*made so that the items scroll with the user*/
+    z-index: 9999;      /*must be highest z index on page*/
+}
+
 img{
     display: block;
     max-width:900px;

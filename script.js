@@ -12,3 +12,18 @@ button.addEventListener("click", function(){
     bodyElement.classList.toggle("lightmode");
     
 });
+
+document.getElementById('fullGalleryButton').addEventListener('click', function(){
+    
+    const buttonSpread = document.getElementById('gCategoryButtons');
+
+    //toggles button visiblity
+    if(buttonSpread.style.display === 'none'){
+        buttonSpread.style.display = 'block';
+        this.textContent = 'Close Gallery'; //changes button text 
+    }
+    else{
+        buttonSpread.style.display = 'none';
+        this.textContent = 'Full Moment Gallery';
+    }
+});
