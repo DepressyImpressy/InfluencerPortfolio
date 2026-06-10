@@ -27,3 +27,18 @@ document.getElementById('fullGalleryButton').addEventListener('click', function(
         this.textContent = 'Full Moment Gallery';
     }
 });
+
+//full gallery buttons
+document.getElementById('ddB').addEventListener('click', function () {
+    console.log("Dragon's Dogma!");
+
+    //redirect the page to a new gallery of dragon's dogma moments clips and images
+});
+
+document.getElementById('mB').addEventListener('click', function () {
+    console.log("Metroid!");
+});
+
+document.getElementById('mhB').addEventListener('click', function () {
+    console.log("Monster Hunter!");
+});
