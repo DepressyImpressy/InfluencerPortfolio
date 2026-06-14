@@ -148,6 +148,48 @@ video{
     height: auto;
 }
 
+/*Modal Customization*/
+#ModalHeader{
+    position: sticky;
+    top: 0;
+    background: #111;
+    z-index: 9999;
+    padding: 10px;
+}
+
+.modal{
+    display: none;
+    position: fixed;
+    z-index: 9999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    overflow-y: auto;
+}
+
+#ModalGalleryContent{
+    position: relative;
+    z-index: 1;
+}
+
+.modal-content{
+    background: #111;
+    margin: 40px auto;
+    padding: 20px;
+    width: 90%;
+    max-width: 1000px;
+    border-radius: 8px;
+}
+
+.close{
+    color: #fff;
+    float: right;
+    font-size: 32px;
+    cursor: pointer;
+}
+
 /*expandable gallery*/
 
 #DragonsDogmaGallery{
@@ -164,10 +206,10 @@ video{
     padding: 0 4px;
 }
 
-        /*creates two equal columns that suiu*/
+/*creates two equal columns*/
 
 .column{
-        flex: 1;
+        flex: 25%;
         padding: 0 5px;
         box-sizing: border-box;
 }
@@ -178,7 +220,3 @@ video{
     display: block;
     margin-bottom: 10px;
 }
-
-
-
-

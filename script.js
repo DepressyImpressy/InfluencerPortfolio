@@ -5,11 +5,13 @@ function myFunction() {
 
 const button = document.getElementById("theme-toggle");
 
+// reusable function that closes all galleries
 function closeAllGalleries() {
     const galleries = document.querySelectorAll('.full-gallery');
     galleries.forEach(g => g.style.display = 'none');
 }
 
+//lightmode button
 button.addEventListener("click", function(){
     console.log("The button was clicked!");
     
@@ -18,6 +20,7 @@ button.addEventListener("click", function(){
     
 });
 
+//full gallery spread for init gallery opening
 document.getElementById('fullGalleryButton').addEventListener('click', function () {
 
     const buttonSpread = document.getElementById('gCategoryButtons');
@@ -35,28 +38,12 @@ document.getElementById('fullGalleryButton').addEventListener('click', function 
     }
 });
 
-//accesses the Dragon's dogma full
 document.getElementById('ddB').addEventListener('click', function () {
-    closeAllGalleries();
-    const ddG = document.getElementById('DragonsDogmaGallery');
-    const elements = document.getElementsByClassName("column");
-
-    ddG.style.display = 'block';
-    for (let i = 0; i < elements.length; i++) {
-        elements[i].style.flex = "25%";
-    }
+    openGalleryInModal('DragonsDogmaGallery');
 });
 
 document.getElementById('mB').addEventListener('click', function () {
-    console.log("Metroid!");
-    closeAllGalleries();
-    const mG = document.getElementById('MetroidGallery');
-    const elements = document.getElementsByClassName("column");
-
-    mG.style.display = 'block';
-    for (let i = 0; i < elements.length; i++) {
-        elements[i].style.flex = "25%";
-    }
+    openGalleryInModal('MetroidGallery');
 });
 
 document.getElementById('mhB').addEventListener('click', function () {
@@ -74,3 +61,29 @@ document.getElementById('sotfB').addEventListener('click', function () {
 document.getElementById('xB').addEventListener('click', function () {
     console.log("Xenoblade!");
 });
+
+
+//function for modal logic
+function openGalleryInModal(galleryId) {
+    const modal = document.getElementById("GalleryModal");
+    const modalContent = document.getElementById("ModalGalleryContent");
+    const gallery = document.getElementById(galleryId);
+
+    //copy html gallery
+    modalContent.innerHTML = gallery.innerHTML;
+
+    //show modal
+    modal.style.display = "block";
+}
+
+//close modal logic
+document.getElementById("CloseModal").onclick = function () {
+    document.getElementById("GalleryModal").style.display = "none";
+}
+
+window.onclick = function (event) {
+    const modal = document.getElementById("GalleryModal");
+    if (event.target === modal) {
+        modal.style.display = "none";
+    }
+}
