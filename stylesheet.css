@@ -206,7 +206,7 @@ video{
     padding: 0 4px;
 }
 
-/*creates two equal columns*/
+/*creates four equal columns*/
 
 .column{
         flex: 25%;
@@ -219,4 +219,49 @@ video{
     height: auto;
     display: block;
     margin-bottom: 10px;
+}
+
+/*Lightbox CSS*/
+.lightbox{
+    display: none;
+    position: fixed;
+    z-index: 10000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.9);
+    justify-content: center;
+    align-items: center;
+}
+
+.l-image{
+    max-width: 90%;
+    max-height: 90%;
+}
+
+.l-close{
+    position: absolute;
+    top: 20px;
+    right: 40px;
+    font-size: 40px;
+    color: white;
+    cursor: pointer;
+}
+
+.l-previous, l-next{
+    position: absolute;
+    top: 50%;
+    font-size: 60px;
+    color: white;
+    cursor: pointer;
+    user-select: none;
+}
+
+.l-previous{
+    left: 40px;
+}
+
+.l-next{
+    right: 40px;
 }

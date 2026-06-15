@@ -110,18 +110,44 @@
             </div>
         </div>
 
+        <div id="ResidentEvilGallery" class="full-gallery">
+            <div class="gallery-row">
+                <div class="column"></div>
+                <div class="column"></div>
+                <div class="column"></div>
+                <div class="column"></div>
+            </div>
+        </div>
+
+        <div id="SotfGallery" class="full-gallery">
+            <div class="gallery-row">
+                <div class="column"></div>
+                <div class="column"></div>
+                <div class="column"></div>
+                <div class="column"></div>
+            </div>
+        </div>
+
+        <div id="XenobladeGallery" class="full-gallery">
+            <div class="gallery-row">
+                <div class="column"></div>
+                <div class="column"></div>
+                <div class="column"></div>
+                <div class="column"></div>
+            </div>
+        </div>
         <!--Modal Logic-->
 
         <div id="GalleryModal" class="modal">
             <div class="modal-content">
                 <!--PersistentHeader-->
                 <div id="ModalHeader">
-                    <button id="ddB">Dragon's Dogma</button>
-                    <button id="mB">Metroid</button>
-                    <button id="mhB">Monster Hunter</button>
-                    <button id="reB">Resident Evil</button>
-                    <button id="sotfB">Sons of the Forest</button>
-                    <button id="xB">Xenoblade</button>
+                    <button id="ddB_modal">Dragon's Dogma</button>
+                    <button id="mB_modal">Metroid</button>
+                    <button id="mhB_modal">Monster Hunter</button>
+                    <button id="reB_modal">Resident Evil</button>
+                    <button id="sotfB_modal">Sons of the Forest</button>
+                    <button id="xB_modal">Xenoblade</button>
 
                     <span id="CloseModal" class="close">&times;</span>
                 </div>
@@ -130,8 +156,16 @@
             </div>
         </div>
 
-        <p>Stuff after all the other stuff.</p>
+        <!--Lightbox Container-->
+        <div id="Lightbox" class="lightbox">
+            <span id="LightboxClose" class="lightbox-close">&times;</span>
+            <img id="LImage" class="l-image"/>
+            <div id="LPrevious" class="l-previous">&#10094;</div>
+            <div id="LNext" class="l-next">&#10095;</div>
+        </div>
 
+
+        <!--Clip Previews-->
         <div class="gallery1">
             <video controls>
                 <source src="videos\betrayal.mp4">
@@ -170,7 +204,9 @@
             </video>
         </div>
     </div>
-    
+
+    <p>Stuff after all the other stuff.</p>
+
 
     <script src="script.js"></script>
 </body>

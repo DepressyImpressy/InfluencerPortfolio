@@ -38,29 +38,64 @@ document.getElementById('fullGalleryButton').addEventListener('click', function 
     }
 });
 
+//Dragon's Dogma Gallery Buttons
 document.getElementById('ddB').addEventListener('click', function () {
     openGalleryInModal('DragonsDogmaGallery');
 });
+document.getElementById('ddB_modal').addEventListener('click', function () {
+    openGalleryInModal('DragonsDogmaGallery');
+})
 
+//Metroid Gallery Buttons
 document.getElementById('mB').addEventListener('click', function () {
     openGalleryInModal('MetroidGallery');
 });
+document.getElementById('mB_modal').addEventListener('click', function () {
+    openGalleryInModal('MetroidGallery');
+});
 
+//Monster Hunter ""
 document.getElementById('mhB').addEventListener('click', function () {
     console.log("Monster Hunter!");
+    openGalleryInModal('MonsterHunterGallery');
+});
+document.getElementById('mhB_modal').addEventListener('click', function () {
+    openGalleryInModal('MonsterHunterGallery');
 });
 
+
+//Resident Evil""
 document.getElementById('reB').addEventListener('click', function () {
-    console.log("Resident Evil!")
+    console.log("Resident Evil!");
+    openGalleryInModal('ResidentEvilGallery');
+});
+document.getElementById('reB_modal').addEventListener('click', function () {
+    openGalleryInModal('ResidentEvilGallery');
 });
 
+//Sons of the forest ""
 document.getElementById('sotfB').addEventListener('click', function () {
     console.log("Sons of the forest!");
+    openGalleryInModal("SotfGallery");
+});
+document.getElementById('sotfB_modal').addEventListener('click', function () {
+    openGalleryInModal('SotfGallery');
 });
 
+//Xenoblade ""
 document.getElementById('xB').addEventListener('click', function () {
     console.log("Xenoblade!");
+    openGalleryInModal("XenobladeGallery");
 });
+document.getElementById('xB_modal').addEventListener('click', function () {
+    openGalleryInModal('XenobladeGallery');
+});
+
+
+
+
+
+
 
 
 //function for modal logic
@@ -74,6 +109,8 @@ function openGalleryInModal(galleryId) {
 
     //show modal
     modal.style.display = "block";
+
+    enableImageClicks();
 }
 
 //close modal logic
@@ -87,3 +124,52 @@ window.onclick = function (event) {
         modal.style.display = "none";
     }
 }
+
+//Lightbox logic
+
+let currentImages = [];
+let currentIndex = 0;
+
+function enableImageClicks() {
+    const images = document.querySelectorAll('#ModalGalleryContent img');
+
+    currentImages = Array.from(images);
+
+    images.forEach((img, index) => {
+        img.addEventListener('click', () => {
+            openLightbox(index);
+        });
+    });
+}
+
+function openLightbox(index) {
+    currentIndex = index;
+
+    const lightbox = document.getElementById("Lightbox");
+    const lImage = document.getElementById("LImage");
+
+    lImage.src = currentImages[currentIndex].src;
+    lightbox.style.display = "flex";
+}
+
+function closeLightbox() {
+    document.getElementById("Lightbox").style.display = "none";
+}
+
+document.getElementById("LPrevious").onclick = () => {
+    currentIndex = (currentIndex - 1 + currentImages.length) % currentImages.length;
+    openLightbox(currentIndex);
+};
+
+document.getElementById("LNext").onclick = () => {
+    currentIndex = (currentIndex + 1) % currentImages.length;
+    openLightbox(currentIndex);
+};
+
+document.addEventListener('keydown', (e) => {
+    if (document.getElementById("Lightbox").style.display === "flex") {
+        if (e.key === "ArrowLeft") document.getElementById("LPrevious").click();
+        if (e.key === "ArrowRight") document.getElementById("LNext").click();
+        if (e.key === "Escape") closeLightbox();
+    }
+});
