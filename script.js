@@ -92,12 +92,6 @@ document.getElementById('xB_modal').addEventListener('click', function () {
 });
 
 
-
-
-
-
-
-
 //function for modal logic
 function openGalleryInModal(galleryId) {
     const modal = document.getElementById("GalleryModal");
@@ -164,6 +158,10 @@ document.getElementById("LPrevious").onclick = () => {
 document.getElementById("LNext").onclick = () => {
     currentIndex = (currentIndex + 1) % currentImages.length;
     openLightbox(currentIndex);
+};
+
+document.getElementById("LightboxClose").onclick = () => {
+    closeLightbox();
 };
 
 document.addEventListener('keydown', (e) => {

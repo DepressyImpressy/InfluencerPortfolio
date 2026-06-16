@@ -238,9 +238,10 @@ video{
 .l-image{
     max-width: 90%;
     max-height: 90%;
+    position: relative;
 }
 
-.l-close{
+.lightbox-close{
     position: absolute;
     top: 20px;
     right: 40px;
@@ -249,13 +250,14 @@ video{
     cursor: pointer;
 }
 
-.l-previous, l-next{
-    position: absolute;
+.l-previous, .l-next{
+    position: fixed;
     top: 50%;
     font-size: 60px;
     color: white;
     cursor: pointer;
     user-select: none;
+    z-index: 10002;
 }
 
 .l-previous{
