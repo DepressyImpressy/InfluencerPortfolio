@@ -16,9 +16,45 @@ button.addEventListener("click", function(){
     console.log("The button was clicked!");
     
     var bodyElement = document.body;
-    bodyElement.classList.toggle("lightmode");
-    
+    bodyElement.classList.toggle("lightmode");    
 });
+
+function showMemberContent() {
+    if (localStorage.getItem("loggedIn") === "true") {
+        document.getElementById("MemberArea").style.display = "block";
+    }
+}
+
+//pseudo login button
+document.getElementById("openLogin").addEventListener("click", () => {
+    document.getElementById("LoginModal").style.display = "block";
+});
+
+//Pseudo Login
+let isLoggedIn = false;
+
+document.getElementById("loginSubmit").addEventListener("click", () => {
+    const user = document.getElementById("loginUser").value;
+    const password = document.getElementById("loginPass").value;
+
+    if (user === "depressy" && password === "impressy") {
+        isLoggedIn = true;
+        localStorage.setItem("loggedIn", "true");
+
+        alert(`welcome back, ${user}`);
+
+        document.getElementById("LoginModal").style.display = "none";
+
+        showMemberContent();
+    }
+    else {
+        alert("Incorrect Username/Password");
+    }
+});
+
+document.getElementById("CloseLogin").onclick = () => {
+    document.getElementById("LoginModal").style.display = "none";
+}
 
 //full gallery spread for init gallery opening
 document.getElementById('fullGalleryButton').addEventListener('click', function () {
@@ -171,3 +207,5 @@ document.addEventListener('keydown', (e) => {
         if (e.key === "Escape") closeLightbox();
     }
 });
+
+

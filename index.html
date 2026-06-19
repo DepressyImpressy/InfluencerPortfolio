@@ -7,6 +7,11 @@
             <button id="theme-toggle">Light Mode</button>
         </div>
 
+        <!--Login in trigger-->
+        <div>
+            <button id="openLogin">Member Login</button>
+        </div>
+
         <div class="titleblock neon2 hiddentext">
             <h1>DepressyImpressy's Cave of Repressies</h1>
         </div>
@@ -136,7 +141,7 @@
                 <div class="column"></div>
             </div>
         </div>
-        <!--Modal Logic-->
+        <!--Gallery Modal Logic-->
 
         <div id="GalleryModal" class="modal">
             <div class="modal-content">
@@ -164,6 +169,18 @@
             <div id="LNext" class="l-next">&#10095;</div>
         </div>
 
+        <!--Login modal-->
+        <div id="LoginModal" class="modal">
+            <div class="modal-content login-box">
+                <h2>Member Login</h2>
+                <input id="loginUser" type="text" placeholder="Username"/>
+                <input id="loginPass" type="password" placeholder="Password"/>
+
+                <button id="loginSubmit">Login</button>
+
+                <span id="CloseLogin" class="close">&times;</span>
+            </div>
+        </div>
 
         <!--Clip Previews-->
         <div class="gallery1">
@@ -206,6 +223,11 @@
     </div>
 
     <p>Stuff after all the other stuff.</p>
+
+    <div id="MemberContent">
+        <h2>Exclusive Members Only Content</h2>
+        <p>This is what you've all been waiting for!</p>
+    </div>
 
 
     <script src="script.js"></script>
