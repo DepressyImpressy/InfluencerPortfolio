@@ -1,3 +1,5 @@
+updateHeaderUI();
+
 function myFunction() {
     var element = document.body;
     element.classList.toggle("dark-mode");
@@ -10,6 +12,20 @@ function closeAllGalleries() {
     const galleries = document.querySelectorAll('.full-gallery');
     galleries.forEach(g => g.style.display = 'none');
 }
+
+//profile logic
+
+const profileIcon = document.getElementById("profileIcon");
+
+if (profileIcon){
+    profileIcon.addEventListener("click", () =>{
+        window.location.href = "account.html";
+    })
+}
+
+
+//logout button
+document.getElementById("logoutBtn").addEventListener("click", logout);
 
 //lightmode button
 button.addEventListener("click", function(){
@@ -30,26 +46,9 @@ document.getElementById("openLogin").addEventListener("click", () => {
     document.getElementById("LoginModal").style.display = "block";
 });
 
-//Pseudo Login
-let isLoggedIn = false;
-
-document.getElementById("loginSubmit").addEventListener("click", () => {
-    const user = document.getElementById("loginUser").value;
-    const password = document.getElementById("loginPass").value;
-
-    if (user === "depressy" && password === "impressy") {
-        isLoggedIn = true;
-        localStorage.setItem("loggedIn", "true");
-
-        alert(`welcome back, ${user}`);
-
-        document.getElementById("LoginModal").style.display = "none";
-
-        showMemberContent();
-    }
-    else {
-        alert("Incorrect Username/Password");
-    }
+//registerAccount
+document.getElementById("register").addEventListener("click", () => {
+    window.location.href = "create-account.html";
 });
 
 document.getElementById("CloseLogin").onclick = () => {

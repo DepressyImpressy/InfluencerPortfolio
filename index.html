@@ -12,9 +12,19 @@
             <button id="openLogin">Member Login</button>
         </div>
 
+        <!--Profile icon w/clickable features-->
+        <div id="profile" class="profile hidden">
+            <img src="imgs/defaultpfp.png" class="pfp" id="pIcon">
+            <div id="profileDropdown" class="profile-dropdown hidden" >
+                <button id="logoutBtn">Logout</button>
+            </div>
+        </div>
+
         <div class="titleblock neon2 hiddentext">
             <h1>DepressyImpressy's Cave of Repressies</h1>
         </div>
+
+        <!---->
 
         <div class="linkList neon">
             <ul>
@@ -141,6 +151,7 @@
                 <div class="column"></div>
             </div>
         </div>
+        
         <!--Gallery Modal Logic-->
 
         <div id="GalleryModal" class="modal">
@@ -177,6 +188,7 @@
                 <input id="loginPass" type="password" placeholder="Password"/>
 
                 <button id="loginSubmit">Login</button>
+                <button id="register">Not a member? Create an account.</button>
 
                 <span id="CloseLogin" class="close">&times;</span>
             </div>
@@ -199,26 +211,6 @@
             <video controls>
                 <source src="videos\BigSub2Suck.mp4">
             </video>
-
-            <video controls>
-                <source src="">
-            </video>
-
-            <video controls>
-                <source src="">
-            </video>
-
-            <video controls>
-                <source src="">
-            </video>
-
-            <video controls>
-                <source src="">
-            </video>
-
-            <video controls>
-                <source src="">
-            </video>
         </div>
     </div>
 
@@ -229,8 +221,11 @@
         <p>This is what you've all been waiting for!</p>
     </div>
 
-
+    <script src="auth.js"></script>
+    <script src="login.js"></script>
     <script src="script.js"></script>
+    
+    
 </body>
 </html>
 
