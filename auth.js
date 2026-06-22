@@ -34,16 +34,16 @@ function login(username, password){
     }
 
     //true login
-    localStorage.getItem("loggedInUser", username);
+    localStorage.setItem("loggedInUser", username);
 
     alert(`Welcome back ${username}!`);
     return true;   
 }
 
 function logout(){
-    localStorage.removeItem("loggedinUser");
+    localStorage.removeItem("loggedInUser");
     updateHeaderUI();
-    alert(`${username} logged out!`);
+    alert(`You have successfully logged out!`);
 }
 
 function updateHeaderUI(){
@@ -55,11 +55,10 @@ function updateHeaderUI(){
 
     if (loggedInUser){
         loginBtn.classList.add("hidden");
-        profileM.classList.remove("hidden");
         profile.classList.remove("hidden");
     }
     else{
         loginBtn.classList.remove("hidden");
-        profileM.classList.add("hidden");
+        profile.classList.add("hidden");
     }
 }

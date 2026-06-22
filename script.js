@@ -15,17 +15,21 @@ function closeAllGalleries() {
 
 //profile logic
 
-const profileIcon = document.getElementById("profileIcon");
+const pIcon = document.getElementById("pIcon");
 
-if (profileIcon){
-    profileIcon.addEventListener("click", () =>{
+if (pIcon){
+    pIcon.addEventListener("click", () =>{
         window.location.href = "account.html";
     })
 }
 
 
 //logout button
-document.getElementById("logoutBtn").addEventListener("click", logout);
+const logoutBtn = document.getElementById("logoutBtn");
+
+if (logoutBtn) {
+    logoutBtn.addEventListener("click", logout);
+}
 
 //lightmode button
 button.addEventListener("click", function(){
