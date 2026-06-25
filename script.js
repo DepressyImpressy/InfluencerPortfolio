@@ -15,7 +15,12 @@ function closeAllGalleries() {
 
 //profile logic
 
-const pIcon = document.getElementById("pIcon");
+
+const savedImage = localStorage.getItem("profileImage");
+
+if (savedImage) {
+    document.getElementById("pIcon").src = savedImage;
+}
 
 if (pIcon){
     pIcon.addEventListener("click", () =>{

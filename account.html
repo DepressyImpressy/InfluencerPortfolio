@@ -3,5 +3,32 @@
     <header></header>
     <body>
         <h1>Your new account!</h1>
+        <button id="editBtn">Edit Profile</button>
+        
+        <div id="profileInfo">
+            <img id="accountPfp" src="" />
+            <h2 id="username"></h2>
+            <p id="pronouns"></p>
+            <p id="bio"></p>
+            <p id="location"></p>
+        </div>
+        
+        <div id="editInfo" class="hidden">
+            <input type="file" id="pfpUpload" accept="image/*"/>
+            <input type="text" id="usernameEdit"/>
+            
+            <div class="dropdown">
+                <button id="pronounBtn" class="dropdown-btn">Pronouns</button>
+
+                <div id="pronounMenu" class="dropdown-menu hidden">
+                    <button class="dropdown-option" data-value="he/him">He/Him</button>
+                    <button class="dropdown-option" data-value="she/her">She/Her</button>
+                    <button class="dropdown-option" data-value="they/them">They/Them</button>
+                    <button class="dropdown-option" data-value="other">Other</button>
+                </div>
+            </div>
+        </div>
+
+        
     </body>
 </html>

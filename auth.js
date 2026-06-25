@@ -10,7 +10,8 @@ function createAccount(username, password){
 
     accounts[username] = {
         password: password,
-        created: new Date().toISOString()
+        created: new Date().toISOString(),
+        profileImage: "imgs/defaultpfp.png",
     }
 
     localStorage.setItem("accounts", JSON.stringify(accounts));
@@ -35,6 +36,8 @@ function login(username, password){
 
     //true login
     localStorage.setItem("loggedInUser", username);
+    localStorage.setItem("profileImage", accounts[username].profileImage);
+
 
     alert(`Welcome back ${username}!`);
     return true;   
