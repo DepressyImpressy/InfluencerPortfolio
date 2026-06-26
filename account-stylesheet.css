@@ -1,0 +1,40 @@
+﻿.dropdown{
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-btn{
+    background: #444;
+    color: white;
+    padding: 10px 14px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.dropdown-menu{
+    position: absolute;
+    top: 45px;
+    left: 0;
+    background: #222;
+    padding: 10px;
+    border-radius: 6px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    width: 150px;
+}
+
+.dropdown-option{
+    background: #333;
+    color: white;
+    border: none;
+    padding: 8px;
+    border-radius: 4px;
+    cursor: pointer;
+    text-align: left;
+}
+
+hidden{
+    display: none;
+}
