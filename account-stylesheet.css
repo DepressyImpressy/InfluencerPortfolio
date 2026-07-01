@@ -38,3 +38,11 @@
 .hidden{
     display: none;
 }
+
+body{
+    background: linear-gradient(to bottom, purple, rgb(233, 142, 233));
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    min-height: 100vh;
+    color: #121212;
+}

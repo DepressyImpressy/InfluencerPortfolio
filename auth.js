@@ -1,6 +1,6 @@
 
 //storingMemberAccount
-function createAccount(username, password){
+function createAccount(username, password, email){
     let accounts = JSON.parse(localStorage.getItem("accounts")) || {};
 
     if (accounts[username]){
@@ -10,8 +10,13 @@ function createAccount(username, password){
 
     accounts[username] = {
         password: password,
+        email: email,
         created: new Date().toISOString(),
         profileImage: "imgs/defaultpfp.png",
+        pronouns: "",
+        bio: "",
+        location: "",
+        username: username
     }
 
     localStorage.setItem("accounts", JSON.stringify(accounts));
